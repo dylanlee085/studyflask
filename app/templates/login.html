@@ -19,7 +19,7 @@ functions set_openid(openid, pr)
 <form action="" method="post" name= "login">
     {{form.hidden_tag()}}
     <p>
-        Please enter your OpenID:<br>
+        Please enter your OpenIDm or select one of the providers below:<br>
         {{form.openid(size=80)}}<br>
         {% for error in form.openid.errors %}
            <span style="color: red;">[{{error}}]</span>
@@ -30,5 +30,5 @@ functions set_openid(openid, pr)
     </p>
     <p>{{form.remember_me}} Remember Me</p>
     <p><input type="submit" value="Sign In"></P>
-</from>
+</form>
 {% endblock %}
